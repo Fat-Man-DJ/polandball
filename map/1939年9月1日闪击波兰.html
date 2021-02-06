@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			timex1{
+				position: absolute;
+				z-index: 1
+			}
+			bj{
+				position: absolute;
+				z-index: 0;
+			}
+			dk{
+				position: absolute;
+				z-index: 1;
+				left:0px;
+				top: 940px;
+			}
+			mp{
+				position: absolute;
+				z-index: 2;
+			}
+			bt1{
+				position: absolute;
+				z-index: 3;
+				left:250px;
+				top:960px;
+			}
+
+			bt2{
+				position: absolute;
+				z-index: 3;
+				left:550px;
+				top:960px;
+			}
+			
+			bt3{
+				position: absolute;
+				z-index: 3;
+				left:850px;
+				top:960px;
+
+			}
+			
+			bt4{
+				position: absolute;
+				z-index: 3;
+				left:1150px;
+				top:960px;
+			}
+		
+			bt5{
+				position: absolute;
+				z-index: 3;
+				left:1450px;
+				top:960px;
+			}
+
+			}
+			kyd{
+				position: absolute;
+				z-index: 3;
+				left:200px;
+				top:1px;
+			}
+			zy{
+				position: absolute;
+				z-index: 3;
+				left:500px;
+				top:10px;
+			}
+			rl{
+				position: absolute;
+				z-index: 3;
+				left:800px;
+				top:15px;
+			}
+
+			kymb{
+				position: absolute;
+				z-index: 2;
+				left:-50px;
+				top:110px;
+			}
+
+		</style>
+		<script type="text/javascript">
+			//打开面板的按钮们
+			function dkymb(){
+				var ui =document.getElementById("kymb");
+				var ui1 =document.getElementById("kej1");
+				var ui2 =document.getElementById("kej2")
+				if(ui.style.display == "none"){
+					ui.style.display = "inline"
+					ui1.style.display = "inline"
+					ui2.style.display = "inline"
+				}
+				else{
+					ui.style.display = "none"
+					ui1.style.display = "none"
+					ui2.style.display = "none"
+				}
+			}
+			//变量童鞋们
+			var kyd = 100;
+			var zy = 1000;
+			var rl = 200000000;
+			//科技树的变量
+			var kj1 = false;
+			//科研面板操作
+			var ui3 = document.getElementById("ts1")
+			var ui4 = document.getElementById("ts2")
+			function keji1(){
+				if(kyd >= 0){
+					keji1_ts()
+				}
+			}
+			function keji1_ts(){
+				ui3.style.display = "inline"
+				ui4.style.display = "inline"
+			}
+		</script>
+
+	<link rel="stylesheet" href="../css/界面.css" />
+	</head>
+	<body>
+		<div>
+				<mp><img src="../img/闪击波兰.png"></mp>
+				<timex1><img src="../img/UI.png" height="100"width="1960"></timex1>
+				<bj><img src="../img/UI1.png"height="1080"width="1960"></bj>
+				<dk><img src="../img/UI.png"height="150"width="1960"></dk>
+				<!--
+                	低栏按钮
+                -->
+				<bt1><input type="button" id="bt1" onclick="dkymb()"
+				value="科研" style="width: 200px;height: 100px;font-size: 50px;font-family: '微软雅黑';background-image:url(../img/UI1.png)"/></bt1>
+				<bt2><input type="button" id="bt2" onclick=""
+				value="军队" style="width: 200px;height: 100px;font-size: 50px;font-family: '微软雅黑';background-image:url(../img/UI1.png)"/><</bt2>				
+				<bt3><input type="button" id="bt3" onclick=""
+				value="计划" style="width: 200px;height: 100px;font-size: 50px;font-family: '微软雅黑';background-image:url(../img/UI1.png)"/></bt3>
+				<bt4><input type="button" id="bt4" onclick=""
+				value="数据" style="width: 200px;height: 100px;font-size: 50px;font-family: '微软雅黑';background-image:url(../img/UI1.png)"/></bt4>
+				<bt5><input type="button" id="bt5" onclick=""
+				value="设置" style="width: 200px;height: 100px;font-size: 50px;font-family: '微软雅黑';background-image:url(../img/UI1.png)"/></bt5>
+                <!--
+                	顶栏属性值
+                -->
+                <kyd><img src="../img/科研点.png"height="100"width="100"></kyd>
+                <zy><img src="../img/资源.png"height="100"width="100"></zy>
+                <rl><img src="../img/人力.png"height="80"width="80"></rl>
+                <!--
+                	两边的超皮的球
+                -->
+                <img src="../img/德三球2.gif" height="300"width="300"style="position: absolute;z-index: 0;left:100px;top:680px;">
+                <img src="../img/德三球1.gif"height="300"width="300"style="position: absolute;z-index: 0;left:1600px;top:680px;">
+                <!--
+                	科研面板
+                -->
+                <kymb><img id="kymb" src="../img/UI1.png"height="830"width="1960"style="display: none;"></kymb>
+                <input type="button" id="kej1" onclick="keji1()" style="position: absolute;z-index: 5;left: 200px;top: 120px;width: 200px;height: 100px;background-image: url(../img/98k.png);display: none">
+				<input type="button" id="kej2" style="position: absolute;z-index: 5;left: 200px;top: 290px;width: 200px;height: 100px;background-image: url(../img/二号坦克.png);display: none;">
+					<!--
+                    	提示
+                    -->
+                    <img id = "ts1" src="../img/UI1.png"style="position: absolute;z-index: 6;left: 600px;top:400px;display: none;"height="300"width="500">
+                    <h1 id = "ts2" style="position:absolute;z-index: 7;font-size: 40px;font-family: '微软雅黑';left: 635px;top: 400px;display: none;">确定要研发这个科技吗？</h1>
+		</div> 
+	</body>
+</html>
